@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <div class="progress" id="progress"></div>
@@ -72,12 +72,12 @@
   <div class="container split">
     <div>
       <h2>I like knowing what happens underneath.</h2>
-      <figure class="photo"><img src="photo.jpg" alt="Two young boys outdoors, one blowing a bubble" width="640" height="640" loading="lazy"></figure>
+      <figure class="photo"><img src="images/photo.jpg" alt="Two young boys outdoors, one blowing a bubble" width="640" height="640" loading="lazy"></figure>
     </div>
     <div class="prose">
-      <p>I’m Nour, a Computing and Communication Engineering student at Alexandria University with a strong interest in technology and problem-solving.</p>
-      <p>My journey into engineering started with a curiosity about how software and systems work, which grew into a passion for building and improving reliable technical solutions.</p>
-      <p>I’m currently focused on developing my skills in Linux, networking, cloud technologies, automation, and DevOps.</p>
+      <p>Write two or three sentences about who you are and what got you into engineering.</p>
+      <p>I enjoy understanding how systems work: Linux, networking, processes, servers, automation and deployment.</p>
+      <p>My goal is to become a DevOps Engineer and take software from a laptop to a reliable, automated production environment.</p>
       <div class="facts">
         <div><b>Alexandria</b><span>Egypt</span></div>
         <div><b>3.5 / 4.00</b><span>CGPA</span></div>
@@ -93,9 +93,9 @@
     <p class="muted intro">Click a stage to see what happened there.</p>
     <div class="pipeline" id="pipeline">
       <button class="stage active" data-i="0"><i></i><b>2024</b><span>Started university</span></button>
-      <button class="stage" data-i="1"><i></i><b>2025</b><span>Linux, Networking & Git</span></button>
-      <button class="stage" data-i="2"><i></i><b>2026</b><span>Docker, Cloud & Automation</span></button>
-      <button class="stage" data-i="3"><i></i><b>Next</b><span>DevOps Engineering</span></button>
+      <button class="stage" data-i="1"><i></i><b>2025</b><span>Linux and Git</span></button>
+      <button class="stage" data-i="2"><i></i><b>2026</b><span>Docker and cloud</span></button>
+      <button class="stage" data-i="3"><i></i><b>Next</b><span>First DevOps role</span></button>
     </div>
     <div class="card stage-detail" id="stageDetail" aria-live="polite"></div>
   </div>
@@ -103,36 +103,108 @@
 
 <section id="skills">
   <div class="container">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
+    <p class="muted intro">Technologies and tools I’m currently building hands-on experience with.</p>
+
     <div class="tabs" role="tablist">
       <button class="tab active" data-tab="prog" role="tab">Programming</button>
       <button class="tab" data-tab="devops" role="tab">DevOps</button>
       <button class="tab" data-tab="net" role="tab">Networking</button>
-      <button class="tab" data-tab="cloud" role="tab">Cloud and data</button>
+      <button class="tab" data-tab="cloud" role="tab">Cloud &amp; Data</button>
     </div>
 
     <div class="panel active" id="prog">
-      <div class="skill"><span>C / C++</span><div class="bar"><i style="--v:80%"></i></div></div>
-      <div class="skill"><span>Python</span><div class="bar"><i style="--v:75%"></i></div></div>
-      <div class="skill"><span>Bash</span><div class="bar"><i style="--v:70%"></i></div></div>
-      <div class="skill"><span>SQL</span><div class="bar"><i style="--v:65%"></i></div></div>
+      <div class="skill">
+        <span>C / C++</span>
+        <small>Programming &amp; Data Structures</small>
+        <div class="bar"><i style="--v:75%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <small>Scripting &amp; Automation</small>
+        <div class="bar"><i style="--v:60%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Bash</span>
+        <small>Command-line scripting</small>
+        <div class="bar"><i style="--v:55%"></i></div>
+      </div>
+      <div class="skill">
+        <span>SQL</span>
+        <small>Databases &amp; Data Management</small>
+        <div class="bar"><i style="--v:65%"></i></div>
+      </div>
     </div>
+
     <div class="panel" id="devops">
-      <div class="skill"><span>Linux</span><div class="bar"><i style="--v:75%"></i></div></div>
-      <div class="skill"><span>Git and GitHub</span><div class="bar"><i style="--v:80%"></i></div></div>
-      <div class="skill"><span>Docker</span><div class="bar"><i style="--v:60%"></i></div></div>
-      <div class="skill"><span>CI/CD</span><div class="bar"><i style="--v:55%"></i></div></div>
+      <div class="skill">
+        <span>Linux</span>
+        <small>System administration &amp; CLI</small>
+        <div class="bar"><i style="--v:70%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Git &amp; GitHub</span>
+        <small>Version control &amp; workflows</small>
+        <div class="bar"><i style="--v:75%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Docker</span>
+        <small>Containerization</small>
+        <div class="bar"><i style="--v:45%"></i></div>
+      </div>
+      <div class="skill">
+        <span>CI/CD</span>
+        <small>Deployment automation</small>
+        <div class="bar"><i style="--v:35%"></i></div>
+      </div>
     </div>
+
     <div class="panel" id="net">
-      <div class="skill"><span>TCP/IP</span><div class="bar"><i style="--v:70%"></i></div></div>
-      <div class="skill"><span>CCNA fundamentals</span><div class="bar"><i style="--v:65%"></i></div></div>
-      <div class="skill"><span>Troubleshooting</span><div class="bar"><i style="--v:60%"></i></div></div>
+      <div class="skill">
+        <span>TCP/IP</span>
+        <small>Networking fundamentals</small>
+        <div class="bar"><i style="--v:65%"></i></div>
+      </div>
+      <div class="skill">
+        <span>CCNA Fundamentals</span>
+        <small>Routing, switching &amp; network concepts</small>
+        <div class="bar"><i style="--v:60%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Network Troubleshooting</span>
+        <small>Connectivity &amp; diagnostics</small>
+        <div class="bar"><i style="--v:65%"></i></div>
+      </div>
+      <div class="skill">
+        <span>SSH</span>
+        <small>Remote system access</small>
+        <div class="bar"><i style="--v:55%"></i></div>
+      </div>
     </div>
+
     <div class="panel" id="cloud">
-      <div class="skill"><span>Azure</span><div class="bar"><i style="--v:50%"></i></div></div>
-      <div class="skill"><span>Data pipelines</span><div class="bar"><i style="--v:55%"></i></div></div>
-      <div class="skill"><span>SQL</span><div class="bar"><i style="--v:65%"></i></div></div>
+      <div class="skill">
+        <span>Azure</span>
+        <small>Cloud fundamentals</small>
+        <div class="bar"><i style="--v:45%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Data Pipelines</span>
+        <small>Data engineering workflows</small>
+        <div class="bar"><i style="--v:50%"></i></div>
+      </div>
+      <div class="skill">
+        <span>SQL</span>
+        <small>Relational databases</small>
+        <div class="bar"><i style="--v:65%"></i></div>
+      </div>
+      <div class="skill">
+        <span>Cloud Deployment</span>
+        <small>Currently developing</small>
+        <div class="bar"><i style="--v:45%"></i></div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -249,6 +321,6 @@
   <a class="button primary" id="mLink" href="#">View on GitHub</a>
 </dialog>
 
-<script src="script.js?v=6"></script>
+<script src="script.js?v=8"></script>
 </body>
 </html>
