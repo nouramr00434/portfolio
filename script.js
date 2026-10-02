@@ -41,7 +41,7 @@ $$('[data-count]').forEach(el => counter.observe(el));
 
 /* ---------- Interactive terminal ---------- */
 const out = $('#termOut'), inp = $('#termIn'), body = $('#termBody');
-const history = []; let hi = 0;
+const cmdLog = []; let hi = 0;
 
 const commands = {
   help: () => 'Commands: <span class="hl">about, skills, projects, contact, theme, clear</span>',
@@ -62,7 +62,7 @@ function print(html, cls = 'out') {
 function run(raw) {
   const c = raw.trim().toLowerCase();
   if (!c) return;
-  history.push(c); hi = history.length;
+  cmdLog.push(c); hi = cmdLog.length;
   print('<span class="ok">nour@portfolio:~$</span> ' + c.replace(/</g, '&lt;'), 'out cmd');
   if (commands[c]) {
     const r = commands[c]();
@@ -73,8 +73,8 @@ function run(raw) {
 print('Welcome. Type <span class="hl">help</span> or tap a command below.');
 inp.addEventListener('keydown', e => {
   if (e.key === 'Enter') { run(inp.value); inp.value = ''; }
-  if (e.key === 'ArrowUp' && hi > 0) inp.value = history[--hi];
-  if (e.key === 'ArrowDown') inp.value = history[++hi] || (hi = history.length, '');
+  if (e.key === 'ArrowUp' && hi > 0) inp.value = cmdLog[--hi];
+  if (e.key === 'ArrowDown') inp.value = cmdLog[++hi] || (hi = cmdLog.length, '');
 });
 body.onclick = () => inp.focus();
 $$('.term-hints button').forEach(b => b.onclick = () => run(b.dataset.cmd));
