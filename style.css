@@ -159,3 +159,8 @@ dialog .button{margin-top:20px}
 @keyframes sway{to{transform:skewX(2deg)}}
 .grass.foot{position:relative;height:50px;margin-top:40px;background-size:90px 50px}
 @media(prefers-reduced-motion:reduce){.leaf,.grass{animation:none}}
+
+/* ABOUT PHOTO */
+.photo{width:min(290px,100%);margin-top:28px;transform:rotate(-2.5deg);transition:transform .3s}
+.photo:hover{transform:rotate(0) scale(1.02)}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18px;border:2px solid var(--accent);box-shadow:8px 8px 0 var(--line)}
