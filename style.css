@@ -144,4 +144,4 @@ dialog .button{margin-top:20px}
   .pipeline::before{display:none}
   .skill{grid-template-columns:110px 1fr}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.status i{animation:none}html{scroll-behavior:auto}}
