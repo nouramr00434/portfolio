@@ -48,7 +48,7 @@ const commands = {
   about: () => 'Nour Amr Mohamed\nComputing &amp; Communication Engineering, Alexandria University.\nFocus: Linux, networking, automation, cloud.',
   skills: () => 'Linux · Git · Docker · CI/CD · Bash · Python · C/C++ · TCP/IP · Azure',
   projects: () => 'Soccer Robot\nLinux Administration Lab\nCloud Deployment\nCI/CD Pipeline\n<span class="ok">Scrolling to projects...</span>',
-  contact: () => 'Email: YOUR_EMAIL@gmail.com\n<span class="ok">Scrolling to the contact form...</span>',
+  contact: () => 'GitHub: github.com/nouramr00434\nLinkedIn: linkedin.com/in/nour-amr-336510366\nEmail: YOUR_EMAIL@gmail.com\n<span class="ok">Scrolling to the contact form...</span>',
   theme: () => { themeBtn.click(); return 'Theme switched.'; },
   clear: () => { out.innerHTML = ''; return null; },
 };
