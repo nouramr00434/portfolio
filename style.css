@@ -1,4 +1,3 @@
-
 :root{
   --bg:#0d1f15;--surface:#13291c;--line:#244a33;
   --text:#e8f4e9;--muted:#9bb8a4;
@@ -97,7 +96,7 @@ nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,
 .tab.active,.chip.active{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .panel{display:none;max-width:640px}
 .panel.active{display:block}
-.skill{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-bottom:16px}
+.skill{display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:center;margin-bottom:16px}
 .bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:var(--green);border-radius:99px;transition:width .9s cubic-bezier(.2,.8,.2,1)}
 .panel.active .bar i{width:var(--v)}
@@ -142,7 +141,7 @@ dialog .button{margin-top:20px}
   .nav-links.open{display:flex}
   .pipeline{grid-template-columns:1fr 1fr;row-gap:22px}
   .pipeline::before{display:none}
-  .skill{grid-template-columns:110px 1fr}
+  .skill{grid-template-columns:130px 1fr}
 }
 @media(prefers-reduced-motion:reduce){.status i{animation:none}html{scroll-behavior:auto}}
 
@@ -164,3 +163,14 @@ dialog .button{margin-top:20px}
 .photo{width:min(290px,100%);margin-top:28px;transform:rotate(-2.5deg);transition:transform .3s}
 .photo:hover{transform:rotate(0) scale(1.02)}
 .photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18px;border:2px solid var(--accent);box-shadow:8px 8px 0 var(--line)}
+
+/* SKILLS WITH DESCRIPTIONS */
+.panel{max-width:720px}
+.skill{grid-template-columns:240px 1fr;grid-template-rows:auto auto;column-gap:20px;row-gap:0;margin-bottom:22px}
+.skill span{grid-column:1;font-weight:600}
+.skill small{grid-column:1;color:var(--muted);font-size:13.5px;line-height:1.35}
+.skill .bar{grid-column:2;grid-row:1/3;align-self:center}
+@media(max-width:760px){
+  .skill{grid-template-columns:1fr;row-gap:2px}
+  .skill .bar{grid-column:1;grid-row:auto;margin-top:8px}
+}
