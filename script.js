@@ -81,10 +81,10 @@ $$('.term-hints button').forEach(b => b.onclick = () => run(b.dataset.cmd));
 
 /* ---------- Journey pipeline ---------- */
 const stages = [
-  ['Started my Computing and Communication Engineering journey, building a strong foundation in programming, computer systems, and networking.'],
-  ['Developed hands-on experience with Linux administration, command-line workflows, networking fundamentals, Git, and GitHub while building and managing technical projects.'],
-  ['Focused on containerization with Docker, cloud fundamentals, scripting, deployment workflows, and automation while developing a deeper understanding of modern infrastructure.'],
-  ['Continuing to build production-oriented skills across CI/CD, cloud infrastructure, Infrastructure as Code, monitoring, and container orchestration, with the goal of starting my career as a DevOps Engineer.'],
+  ['Started university', 'Started my Computing and Communication Engineering journey, building a strong foundation in programming, computer systems, and networking.'],
+  ['Linux, Networking & Git', 'Developed hands-on experience with Linux administration, command-line workflows, networking fundamentals, Git, and GitHub while building and managing technical projects.'],
+  ['Docker, Cloud & Automation', 'Focused on containerization with Docker, cloud fundamentals, scripting, deployment workflows, and automation while developing a deeper understanding of modern infrastructure.'],
+  ['DevOps Engineering', 'Continuing to build production-oriented skills across CI/CD, cloud infrastructure, Infrastructure as Code, monitoring, and container orchestration, with the goal of starting my career as a DevOps Engineer.'],
 ];
 function showStage(i) {
   $$('.stage').forEach((s, k) => {
